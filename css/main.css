@@ -1,16 +1,23 @@
 html {
-    font-size: 1em;
+    font-size: 18px;
     line-height: 1.4;
 }
 
 body{
     font-family: 'Open Sans', sans-serif;
     color: #3d464d;
+    font-size: 1em;
 }
 
 h1, h3 {
-    line-height: 40px;
+    line-height: 1em;
     text-rendering: optimizelegibility;
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 14px;
+    }
 }
 
 .content{
@@ -29,17 +36,26 @@ h1, h3 {
 }
 
 .av{
-    margin: 50px auto;
-    width:300px;
+    margin: 2em auto;
+    width:14em;
+    height: 14em;
+    text-align: center;
+}
+
+.av .profile {
+    background: url('../img/av.png') no-repeat;
+    background-size: 100%;
+    height: 14em;
+    width: 14em;
+    display: inline-block;
 }
 
 .headline{
-    margin-top: 50px;
     text-align: center;
 }
 
 .headline h1{
-    font-size: 60px;
+    font-size: 4em;
     color: #3d464d;
     margin: 0;
     font-weight: 500;
@@ -47,15 +63,14 @@ h1, h3 {
 
 .headline h3{
     margin: 0;
-    font-size: 28px;
+    font-size: 2em;
     font-weight: 100;
     opacity: .6;
 }
 
 .main-nav{
-    margin: 40px auto 0 auto;
+    margin: 2em auto 0 auto;
     text-align: center;
-    font-size: 18px;
     font-weight: 300;
 }
 
@@ -64,7 +79,6 @@ h1, h3 {
 }
 
 .main-nav > ul > li{
-    margin-left: 50px;
     display: inline-block;
     vertical-align: middle;
 
@@ -91,34 +105,35 @@ h1, h3 {
 }
 
 .main-nav li.abt{
-    width: 65px;
+    width: 3em;
 }
 
 .main-nav li.git{
-    width: 65px;
+    width: 4em;
 }
 
 .main-nav li.so{
-    width: 120px;
+    width: 7em;
 }
 
 .main-nav li.pt{
-    width: 65px;
+    width: 4em;
 }
 
 .main-nav li.res{
-    width: 65px;
+    width: 4em;
 }
 
 .about{
     text-align: center;
-    font-size: 16px;
+    font-size: 0.9em;
     font-weight: 100;
 }
 
 #about{
     opacity: 0;
     visibility: hidden;
+    padding: 0 3em;
 
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -133,7 +148,7 @@ h1, h3 {
 
 .sm-container{
     text-align: center;
-    margin: 0 auto 40px;
+    margin: 0 auto 2em;
 }
 
 .sm-icon{
