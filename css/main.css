@@ -14,9 +14,21 @@ h1, h3 {
     text-rendering: optimizelegibility;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     html {
         font-size: 14px;
+    }
+}
+
+@media (max-width: 355px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 310px) {
+    html {
+        font-size: 10px;
     }
 }
 
