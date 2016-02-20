@@ -152,15 +152,19 @@ h1, h3 {
 
 .sm-container{
     text-align: center;
-    margin: 0 auto 2em;
+    margin: 0 auto;
+}
+
+.sm-container.icon-links {
+    height: 2em;
+    font-size: 18px;
 }
 
 .sm-icon{
     background-color: #3d464d;
-    height: 32px;
-    width: 32px;
-    line-height: 28px;
-    border-radius: 17px;
+    height: 2em;
+    width: 2em;
+    border-radius: 2em;
     display:inline-block;
 
     -webkit-transition: opacity .1s ease;
@@ -173,13 +177,23 @@ h1, h3 {
     opacity: .4;
 }
 
-.sm-icon::after {
-    content: ".";
-    visibility: hidden;
-}
-
 .sm-icon img{
     display: block;
-    margin: 4px auto;
+    margin: .3em auto;
 }
 
+p.github-link {
+    margin: 1em;
+    font-size: .7em;
+    text-decoration: none;
+    color: #3d464d;
+}
+
+p.github-link a {
+    text-decoration: none;
+    color: #3d464d;
+}
+
+p.github-link a:hover {
+    opacity: .5;
+}
