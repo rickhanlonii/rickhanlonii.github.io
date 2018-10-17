@@ -1,0 +1,16 @@
+{
+  "name": "Rick Hanlon Codes",
+  "short_name": "RPH Codes",
+  "background_color": "#fff",
+  "theme_color": "#3d464d",
+  "display": "fullscreen",
+  "start_url":  "/",
+  "scope": "/",
+  "icons":  [
+    {
+      "src": "/img/av512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

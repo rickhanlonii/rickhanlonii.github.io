@@ -1,118 +1,352 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Rick Hanlon Codes</title>
-
+    <meta name="theme-color" content="#3d464d"/>
     <meta name="description" content="Rick Hanlon Codes">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700'>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Rick Hanlon Codes</title>
+    <link rel="manifest" href="/manifest.json">
 
     <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700');
+
         #about {
             opacity: 0;
             visibility: hidden;
         }
+
+        html {
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #3d464d;
+            font-size: 1em;
+        }
+
+        h1, h3 {
+            line-height: 1em;
+            text-rendering: optimizelegibility;
+        }
+
+        @media (max-width: 500px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 355px) {
+            html {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 310px) {
+            html {
+                font-size: 10px;
+            }
+        }
+
+        .content {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: scroll;
+
+            box-shadow: inset 0 0 100px 10px rgba(0, 0, 0, .08);
+            -webkit-box-shadow: inset 0 0 100px 10px rgba(0, 0, 0, .08);
+            -moz-box-shadow: inset 0 0 100px 10px rgba(0, 0, 0, .08);
+            -o-box-shadow: inset 0 0 100px 10px rgba(0, 0, 0, .08);
+        }
+
+        .av {
+            margin: 2em auto;
+            width: 14em;
+            height: 14em;
+            text-align: center;
+        }
+
+        .av .profile {
+            background: url('../img/av.webp') no-repeat;
+            background-size: 100%;
+            height: 14em;
+            width: 14em;
+            display: inline-block;
+        }
+
+        .headline {
+            text-align: center;
+        }
+
+        .headline h1 {
+            font-size: 4em;
+            color: #3d464d;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .headline h3 {
+            margin: 0;
+            font-size: 2em;
+            font-weight: 100;
+            opacity: .6;
+        }
+
+        .akron {
+            color: #00285e;
+        }
+
+        .main-nav {
+            margin: 2em auto 0 auto;
+            text-align: center;
+            font-weight: 300;
+        }
+
+        .main-nav > ul {
+            padding: 0;
+        }
+
+        .main-nav > ul > li {
+            display: inline-block;
+            vertical-align: middle;
+
+            -webkit-transition: all .1s ease;
+            -moz-transition: all .1s ease;
+            -o-transition: all .1s ease;
+            transition: all .1s ease;
+        }
+
+        .main-nav > ul > li:first-child {
+            margin-left: 0;
+        }
+
+        .main-nav > ul > li:hover {
+            margin-top: -10px;
+            font-weight: 500;
+        }
+
+        .main-nav > ul > li > a {
+            padding: 0;
+            margin-top: -32px;
+            text-decoration: none;
+            color: #3d464d;
+        }
+
+        .main-nav li.abt {
+            width: 3em;
+        }
+
+        .main-nav li.git {
+            width: 4em;
+        }
+
+        .main-nav li.so {
+            width: 7em;
+        }
+
+        .main-nav li.pt {
+            width: 4em;
+        }
+
+        .main-nav li.res {
+            width: 4em;
+        }
+
+        .about {
+            text-align: center;
+            font-size: 0.9em;
+            font-weight: 100;
+        }
+
+        #about {
+            opacity: 0;
+            visibility: hidden;
+            padding: 0 3em;
+
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+
+        #about:target {
+            opacity: .9;
+            visibility: visible;
+        }
+
+        .sm-container {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .sm-container.icon-links {
+            height: 2em;
+            font-size: 18px;
+        }
+
+        .sm-icon {
+            background-color: #3d464d;
+            height: 2em;
+            width: 2em;
+            border-radius: 2em;
+            display: inline-block;
+
+            -webkit-transition: opacity .1s ease;
+            -moz-transition: opacity .1s ease;
+            -o-transition: opacity .1s ease;
+            transition: opacity .1s ease;
+        }
+
+        .sm-icon:hover {
+            opacity: .4;
+        }
+
+        .sm-icon img {
+            display: block;
+            margin: .3em auto;
+        }
+
+        p.github-link {
+            margin: 1em;
+            font-size: .7em;
+            text-decoration: none;
+            color: #3d464d;
+        }
+
+        p.github-link a {
+            text-decoration: none;
+            color: #3d464d;
+        }
+
+        p.github-link a:hover {
+            opacity: .5;
+        }
     </style>
 
     <script>
-        (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments);
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src   = g;
+        m.parentNode.insertBefore(a, m);
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-74100810-1', 'auto');
-        ga('send', 'pageview');
+      ga('create', 'UA-74100810-1', 'auto');
+      ga('send', 'pageview');
 
     </script>
 </head>
 
 <body>
-    <div class="content">
-        <div class="av">
-            <div class="profile"></div>
-        </div>
+<div class="content">
+    <div class="av">
+        <div class="profile"></div>
+    </div>
 
-        <div class="headline">
-            <h1 class="headline">Rick Hanlon</h1>
-            <h3 class="akron">Just a dev from Akron, Ohio.</h3>
-        </div>
+    <div class="headline">
+        <h1 class="headline">Rick Hanlon</h1>
+        <h3 class="akron">Just a dev from Akron, Ohio.</h3>
+    </div>
 
-        <nav class="main-nav">
-            <ul>
-                <li class="abt">
-                    <a href="#about">About</a>
-                </li>
-                <li class="git">
-                    <a href="https://github.com/rickhanlonii" target="_blank">GitHub</a>
-                </li>
-                <li class="so">
-                    <a href="http://stackoverflow.com/users/2102634/rick-hanlon-ii" target="_blank">StackOverflow</a>
-                </li>
-                <li class="pt">
-                    <a href="https://coderwall.com/p/u/rickhanlonii" target="_blank">Protips</a>
-                </li>
-                <li class="res">
-                    <a href="mailto:rickhanlonii@gmail.com?Subject=Contact%20form" target="_blank">Contact</a>
-                </li>
-            </ul>
-        </nav>
+    <nav class="main-nav">
+        <ul>
+            <li class="abt">
+                <a href="#about" rel="noopener">About</a>
+            </li>
+            <li class="git">
+                <a href="https://github.com/rickhanlonii" rel="noopener" target="_blank">GitHub</a>
+            </li>
+            <li class="so">
+                <a href="http://stackoverflow.com/users/2102634/rick-hanlon-ii" rel="noopener" target="_blank">StackOverflow</a>
+            </li>
+            <li class="pt">
+                <a href="https://coderwall.com/p/u/rickhanlonii" rel="noopener" target="_blank">Protips</a>
+            </li>
+            <li class="res">
+                <a href="mailto:rickhanlonii@gmail.com?Subject=Contact%20form" rel="noopener"
+                   target="_blank">Contact</a>
+            </li>
+        </ul>
+    </nav>
 
-        <div id="about" class="about">
-            <p>Rick Hanlon is a full stack software engineer from Akron, Ohio with a BS in Theoretical Mathematics from the
-                University of Akron.</p>
-            <p></p>
-        </div>
+    <div id="about" class="about">
+        <p>Rick Hanlon is a full stack software engineer from Akron, Ohio with a BS in Theoretical Mathematics from the
+            University of Akron.</p>
+        <p></p>
+    </div>
 
-        <div class="sm-container icon-links">
-            <div class="sm-icon">
-                <a href="https://news.ycombinator.com/user?id=rickhanlonii" target="_blank">
+    <div class="sm-container icon-links">
+        <div class="sm-icon">
+            <a href="https://news.ycombinator.com/user?id=rickhanlonii" rel="noopener" target="_blank">
                     <span>
-                        <img src="img/hackernews-48.png" height="24px" width="24px" />
+                        <img alt="Hacker News icon" src="img/hackernews-48.png" height="24px" width="24px"/>
                     </span>
-                </a>
-            </div>
-            <div class="sm-icon">
-                <a href="https://coderwall.com/rickhanlonii" target="_blank">
-                    <img src="img/coderwall-48.png" height="24px" width="24px" />
-                </a>
-            </div>
-            <div class="sm-icon">
-                <a href="https://twitter.com/rickhanlonii" target="_blank">
-                    <span>
-                        <img src="img/twitter-48.png" height="24px" width="24px" />
-                    </span>
-                </a>
-            </div>
-            <div class="sm-icon">
-                <a href="https://www.linkedin.com/in/rickhanlonii/" target="_blank">
-                    <span>
-                        <img src="img/linkedin-48.png" height="24px" width="24px" />
-                    </span>
-                </a>
-            </div>
-            <div class="sm-icon">
-                <a href="https://www.instagram.com/therickhanlonii/" target="_blank">
-                    <span>
-                        <img src="img/instagram-48.png" height="24px" width="24px" />
-                    </span>
-                </a>
-            </div>
+            </a>
         </div>
-
-        <div class="sm-container">
-            <p class="github-link">
-                <a target="_blank" href="files/resume.pdf">Resume</a> |
-                <a target="_blank" href="https://github.com/rickhanlonii/rickhanlonii.github.io">View on GitHub</a>
-            </p>
+        <div class="sm-icon">
+            <a href="https://coderwall.com/rickhanlonii" rel="noopener" target="_blank">
+                <img alt="Coderwall icon" src="img/coderwall-48.png" height="24px" width="24px"/>
+            </a>
+        </div>
+        <div class="sm-icon">
+            <a href="https://twitter.com/rickhanlonii" rel="noopener" target="_blank">
+                    <span>
+                        <img alt="Twitter icon" src="img/twitter-48.png" height="24px" width="24px"/>
+                    </span>
+            </a>
+        </div>
+        <div class="sm-icon">
+            <a href="https://www.linkedin.com/in/rickhanlonii/" rel="noopener" target="_blank">
+                    <span>
+                        <img alt="LinkedIn icon" src="img/linkedin-48.png" height="24px" width="24px"/>
+                    </span>
+            </a>
+        </div>
+        <div class="sm-icon">
+            <a href="https://www.instagram.com/therickhanlonii/" rel="noopener" target="_blank">
+                    <span>
+                        <img alt="Instagram icono" src="img/instagram-48.png" height="24px" width="24px"/>
+                    </span>
+            </a>
         </div>
     </div>
-</body>
 
+    <div class="sm-container">
+        <p class="github-link">
+            <a target="_blank" href="files/resume.pdf" rel="noopener">Resume</a> |
+            <a target="_blank" href="https://github.com/rickhanlonii/rickhanlonii.github.io" rel="noopener">View on
+                GitHub</a>
+        </p>
+    </div>
+</div>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js').then(function(registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function(err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    });
+  }
+</script>
+</body>
 </html>
